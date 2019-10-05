@@ -10628,7 +10628,7 @@ a.text-dark:hover, a.text-dark:focus {
   .resume-profile-image, .buttons {
     display: none;
   }
-  .py-3 {
+  .py-3:not(.resume-intro) {
     padding-bottom: .5rem !important;
   }
 }
