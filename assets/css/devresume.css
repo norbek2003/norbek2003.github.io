@@ -10473,17 +10473,8 @@ a.text-dark:hover, a.text-dark:focus {
 @media print {
   *, *::before, *::after {
     text-shadow: none !important;
-    box-shadow: none !important
+    box-shadow: none !important;
   }
-
-  a:not(.btn) {
-    text-decoration: underline
-  }
-
-  abbr[title]::after {
-    content: " ("attr(title) ")"
-  }
-
   pre {
     white-space: pre-wrap !important
   }
@@ -10500,26 +10491,29 @@ a.text-dark:hover, a.text-dark:focus {
   tr, img {
     page-break-inside: avoid
   }
-
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3
-  }
-
-  h2, h3 {
-    page-break-after: avoid
-  }
-
   @page {
-    size: a3
+    size: auto;  
+    margin: 0mm; 
   }
 
   body {
-    min-width: 992px !important
+    min-width: 992px !important;
+    margin: 0px;
+    background-color:#FFFFFF; 
+    -webkit-print-color-adjust: exact !important;
+  }
+  body, html {
+    margin-top:0px;
+    padding-top:0px;
   }
 
   .container {
-    min-width: 992px !important
+    min-width: 992px !important;
+    padding: 0 !important;
+  }
+  .resume-wrapper {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   .navbar {
@@ -10533,29 +10527,10 @@ a.text-dark:hover, a.text-dark:focus {
   .table {
     border-collapse: collapse !important
   }
-
-  .table td, .table th {
-    background-color: #fff !important
+  hr {
+    margin: .5rem 0;
   }
-
-  .table-bordered th, .table-bordered td {
-    border: 1px solid #a9a8a8 !important
-  }
-
-  .table-dark {
-    color: inherit
-  }
-
-  .table-dark th, .table-dark td, .table-dark thead th, .table-dark tbody+tbody {
-    border-color: #a9a8a8
-  }
-
-  .table .thead-dark th {
-    color: inherit;
-    border-color: #a9a8a8
-  }
-
-
+  /*Rules previously in a seperate location*/
   .d-print-none {
     display: none !important
   }
@@ -10594,6 +10569,67 @@ a.text-dark:hover, a.text-dark:focus {
     display: -webkit-inline-box !important;
     display: -webkit-inline-flex !important;
     display: inline-flex !important
+  }
+
+
+  .resume-title {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .resume-contact {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .resume-main {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-right: 3rem !important;
+  }
+  .resume-aside {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .item-title {
+    flex: 0 0 60%;
+    max-width: 60% !important;
+  }
+  .item-meta {
+    flex: 0 0 40%;
+    max-width: 40% !important;
+    text-align: right !important;
+  }
+  .resume-section-heading {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.15rem;
+    color: #54B689
+  }
+  .mb-md-0, .my-md-0 {
+    margin-bottom: 0 !important;
+  }
+  .mb-lg-0, .my-lg-0 {
+    margin-bottom: 2rem !important;
+  }
+  .d-lg-inline-block {
+    display: inline-block !important;
+  }
+
+  .resume-section-heading:before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 100%;
+    background: #54B689;
+    position: absolute;
+    left: 0;
+    top: 0
+  }
+  .resume-profile-image, .buttons {
+    display: none;
+  }
+  .py-3 {
+    padding-bottom: .5rem !important;
   }
 }
 
@@ -10746,12 +10782,12 @@ a.resume-link:hover {
 
 @media (max-width: 991.98px) {
   .resume-aside {
-    border-left: 0
+ //   border-left: 0
   }
 }
 
 @media (max-width: 767.98px) {
   .resume-contact {
-    border-left: 0
+  //  border-left: 0
   }
 }
