@@ -30,13 +30,6 @@
     background: #23d884;
     text-decoration: none;
 }
-.button .ico-download {
-    background-image: url("/assets/images/icons/icon-download.svg");
-    -webkit-background-size: 14px,16px;
-    -moz-background-size: 14px,16px;
-    background-size: 14px,16px;
-    width: 14px;
-}
 .button .icon {
     display: inline-block;
     vertical-align: middle;
@@ -76,7 +69,9 @@
 }
 .img-fluid {
     border-radius: 50%;
-    opacity: 87.5%;
+    width: 100%;
+    -webkit-mask: radial-gradient(circle at 50% 50%, #fff 33%,  transparent 100%);
+    mask: radial-gradient(circle at 50% 50%, #fff 33%,  transparent 100%);
 }
 
 @media print {
