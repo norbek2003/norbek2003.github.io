@@ -1,3 +1,6 @@
+body {
+    font-family: serif !important;
+}
 .button.start {
     border: 0;
     background: #21cc7d;
