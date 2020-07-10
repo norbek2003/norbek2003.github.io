@@ -85,4 +85,11 @@
     .resume-wrapper {
 	box-shadow: none !important;
     }
+    .item-title, .item-meta {
+	flex: auto;
+	max-width: fit-content !important;
+    }
+    .item-heading {
+	justify-content: space-between;
+    }
 }
